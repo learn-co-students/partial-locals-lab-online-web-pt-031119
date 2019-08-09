@@ -18,11 +18,13 @@ class Student < ActiveRecord::Base
     if student_name==""
       self.all
     else
+      students = []
       self.all.each do |student|
         if student.name.include?(student_name.capitalize)
-          self.find_by(name: student_name.capitalize)
+          students << student
         end
       end
+      students
     end
   end
 
