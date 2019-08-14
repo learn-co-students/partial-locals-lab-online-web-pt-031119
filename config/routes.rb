@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'students/search', to: 'students#search_form', as: 'student_search'
+  post 'students/search', to: 'students#search_result'
+  resources :students, except: :destroy
+  resources :classrooms, except: :destroy
 end

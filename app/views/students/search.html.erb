@@ -1,0 +1,9 @@
+<fieldset>
+<legend>Search for a student</legend>
+    <%= form_tag('search', method: :post) %>
+    <p>
+    <%= label_tag 'student_search' %>
+    <%= text_field_tag 'student[search]' %>
+    </p>
+    <%= submit_tag "Search" %>
+</fieldset>
