@@ -1,3 +1,4 @@
+
 require "rails_helper"
 
 RSpec.describe "show_view" do
