@@ -1,0 +1,8 @@
+<%= form_for(:student, url: "index", method: :get) do |f| %>
+	Search For Student: <%= f.text_field :name %>
+	<%= f.submit %>
+<% end %>
+
+<%= @students.each do |s| %>
+	<%= render partial: 'student', locals: {student: s} %>
+<% end %>
