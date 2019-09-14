@@ -47,6 +47,3 @@ RSpec.describe 'classroom_show_view' do
       else
         expect(rendered).to include(student.name)
     end
-    end
-  end
-end
